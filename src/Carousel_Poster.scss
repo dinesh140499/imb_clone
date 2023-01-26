@@ -1,0 +1,53 @@
+@import "./Colors.scss";
+
+.carousel-poster {
+  position: relative;
+  .posterImg {
+    height: 600px;
+
+    img{
+        display: block;
+        margin: auto;
+        object-fit: cover;
+        width: 100%;
+
+    }
+  }
+  .carousel_poster_overlay {
+    position: absolute;
+    padding: 5rem;
+    bottom: 0px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-image: linear-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 1));
+    opacity: 1;
+    transition: opacity 0.3s;
+
+    h1{
+        color: $white;
+        font-size: 5rem;
+    }
+
+    h3{
+        color: $white;
+
+        span{
+            margin-left: 2rem;
+            i{
+                color: $yellow;
+            }
+        }
+         
+    }
+
+    p{
+        max-width: 50%;
+        color: $white;
+        text-align: left;
+    }
+  }
+}

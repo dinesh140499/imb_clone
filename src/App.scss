@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+@import "./Colors.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+body {
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.card {
+  transition: transform 0.2s;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0.19rem;
+  cursor: pointer;
+  max-width: 200px;
+  min-height: auto;
+  z-index: 0;
+  border: 1px solid rgb(99, 99, 99);
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0.5rem 0.3rem;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
+    opacity: 0;
+    transition: $transition;
+
+    h4 {
+      color: $white;
+      font-weight: bold;
+    }
+
+    p {
+      color: $white;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.intro {
+  margin-top: 2rem;
+  color: $white;
+  font-weight: bold;
+}
+
+.card:hover {
+  transform: scale(1.2);
+  z-index: 1000;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+// @media(max-width:1600px){}
+// @media(max-width:1440px){}
+// @media(max-width:1366px){}
+
+
+@media (max-width: 1440px) {
+  .carousel-poster .carousel_poster_overlay{
+    padding: 2rem 5rem;
+  }
+
+  .carousel .carousel-poster .carousel_poster_overlay p{
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-toggler {
+    background-color: $yellow;
+    color: white;
+  }
+  .carousel .carousel-poster .posterImg {
+    height: auto;
+  }
+
+  .carousel .control-dots {
+    display: none;
+  }
+
+  .carousel .carousel-poster .carousel_poster_overlay {
+    display: none;
+  }
+
+  // .carousel-poster .carousel_poster_overlay p{
+  //   display: none;
+  // }
+
+  // .carousel-poster .carousel_poster_overlay h1{
+  //   font-size: 2rem !important;
+  // }
+
+  .card .overlay p {
+    font-size: 0.8rem;
+  }
+
+  .card:hover {
+    transform: scale(1.1);
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+}
+
+@media (max-width: 376px) {
+  header .header-navbar {
+    padding: 1rem;
+  }
+}

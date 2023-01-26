@@ -1,0 +1,29 @@
+@import './Colors.scss';
+
+.header-navbar{
+    .container{
+        padding: 0;
+    }
+    padding: 1rem 0;
+    .logo{
+        background-color: $yellow;
+        color: black;
+        width: 5rem;
+        display: flex;
+        justify-content: center;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 1.5rem;
+        padding: 0.3rem 2rem;
+    }
+
+    .navbar-nav .nav-item .nav-link{
+        color: $white;
+        font-weight: bold;
+
+        &:hover{
+            color: $yellow;
+        }
+    }
+
+}

@@ -1,0 +1,11 @@
+@import "./Colors.scss";
+
+footer {
+    background-color: rgb(49, 49, 49);
+    padding: 1rem;
+    margin-top: 2rem;
+  h4 {
+    font-size: 1rem;
+    color: $white;
+  }
+}
